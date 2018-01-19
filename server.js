@@ -38,7 +38,7 @@ app.post('/',async (req, res) => {
     if(data.title && data.content)message.addField(data.title, data.content);
     else if(data.title && !data.topic && !data.subreddit)message.setTitle(`r/${data.title}`);
     if(data.imageURL && !/ifttt/gi.test(data.imageURL) && validURL(data.imageURL)){
-        message.setImage(data.imageURL);
+        message.setThumbnail(data.imageURL);
     }
     webhook.send("", {username: data.author, avatarURL:data.avatarURL, embeds: [message]});
     res.send("Sent '" + JSON.stringify(res.req.body) + "' To the Webhook");
