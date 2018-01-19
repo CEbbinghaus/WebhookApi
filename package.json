@@ -2,7 +2,7 @@
   "name": "webhookapi",
   "version": "0.1.0",
   "description": "A Api allowing you to post to a webhook",
-  "main": "server.js",
+  "main": "start.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
