@@ -1,0 +1,31 @@
+{
+  "name": "webhookapi",
+  "version": "0.1.0",
+  "description": "A Api allowing you to post to a webhook",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CEbbinghaus/WebhookApi.git"
+  },
+  "keywords": [
+    "Webhook",
+    "api",
+    "discord"
+  ],
+  "author": "CEbbinghaus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CEbbinghaus/WebhookApi/issues"
+  },
+  "homepage": "https://github.com/CEbbinghaus/WebhookApi#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "clear": "0.0.1",
+    "discord.js": "^11.3.0",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  }
+}
