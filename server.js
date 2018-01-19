@@ -26,7 +26,7 @@ app.post('/', (req, res) => {
     .setTitle(`r/${data.subreddit}`)
     .setURL(data.url)
     .addField(data.title, data.content);
-    if(data.imageURL != "http://ifttt.com/images/no_image_card.png"){
+    if(data.imageURL != "https://ifttt.com/images/no_image_card.png"){
         message.setImage(data.imageURL);
     }
     
@@ -36,5 +36,5 @@ app.post('/', (req, res) => {
     let image = data.imageURL;
     webhook.send("", {username: data.author, avatarURL:"http://i0.kym-cdn.com/entries/icons/original/000/022/240/jiji.png", embeds: [message]});
     console.log(author, title, content, subreddit, url, image);
-    res.send("Done");
+    res.send("Sent '" + JSON.stringify(res.req.body) + "' To the Webhook");
 });
