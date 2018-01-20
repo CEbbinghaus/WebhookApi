@@ -36,7 +36,7 @@ app.post('/',async (req, res) => {
     else if(data.topic)message.setTitle(`${data.topic}`);
     if(data.url && validURL(data.url))message.setURL(data.url);
     if(data.title && data.content)message.addField(data.title, data.content);
-    else if(data.title && !data.topic && !data.subreddit)message.setTitle(`r/${data.title}`);
+    else if(data.title && !data.topic && !data.subreddit)message.setTitle(`${data.title}`);
     if(data.imageURL && !/ifttt/gi.test(data.imageURL) && validURL(data.imageURL)){
         message.setThumbnail(data.imageURL);
     }
