@@ -1,5 +1,3 @@
-import { EINPROGRESS } from "constants";
-
 const express = require("express");
 const request = require('request');
 const clear = require('clear');
