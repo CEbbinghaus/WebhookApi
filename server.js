@@ -1,3 +1,5 @@
+import { EINPROGRESS } from "constants";
+
 const express = require("express");
 const request = require('request');
 const clear = require('clear');
@@ -37,6 +39,7 @@ app.post('/',async (req, res) => {
     if(data.color)message.setColor(data.color);
     if(data.url && validURL(data.url))message.setURL(data.url);
     if(data.title && data.content)message.addField(data.title, data.content);
+    else if(!data.title || !data.content)message.addField(data.title || data.content, "\u200b");
     else if(data.title && !data.topic && !data.subreddit)message.setTitle(`${data.title}`);
     if(data.imageURL && !/ifttt/gi.test(data.imageURL) && validURL(data.imageURL)){
         message.setImage(data.imageURL);
